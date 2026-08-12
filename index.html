@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>Online Feedback Form</h2>
+        <p>We value your feedback! Please fill out the form below.</p>
+
+        <form id="feedbackForm" onsubmit="return validateForm(event)">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your name">
+                <small id="nameError" class="error-text"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <small id="emailError" class="error-text"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Your Feedback</label>
+                <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+                <small id="messageError" class="error-text"></small>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+
+        <div id="thankYouCard" class="thank-you-card" style="display: none;">
+            <h3>Thank You! 🎉</h3>
+            <p>Your feedback has been successfully submitted. We appreciate your response.</p>
+            <button onclick="resetForm()" class="reset-btn">Submit Another Response</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
